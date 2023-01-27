@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <title>Instagram Feed con Bootstrap</title>
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
+      integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
+      crossorigin="anonymous"
+    ></script>
+
+  <!-- Inicio Navbar -->
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <!-- Logo Instagram Parte Izquierda -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <i class="bi bi-instagram p-1"></i>
+            <span>Instagram</span>
+          </a>
+
+          <!-- Parte Derecha -->
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav align-items-center">
+              <!-- Botón New Post -->
+              <li class="nav-item active">
+                <button
+                  type="button"
+                  class="btn btn-success d-flex justify-content-end p-2 m-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Create a new post
+                </button>
+              </li>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Create new post
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Caption:</p>
+                      <div class="mb-3">
+                        <label
+                          for="exampleFormControlTextarea1"
+                          class="form-label"
+                        ></label>
+                        <textarea
+                          class="form-control text-secondary"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                        >
+Add the caption of the post here</textarea
+                        >
+
+                        <div class="btn btn-light m-1">
+                          <i class="bi bi-camera-fill"></i>
+                        </div>
+                        <div class="btn btn-light m-1">
+                          <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-success">
+                            Publish
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle p-2 m-1"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-gear-fill"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Privacy and Data</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item text-danger" href="#">Log out</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <!-- Fin Navbar -->
+
+    <!-- Inicio Pestañas -->
+    <nav>
+      <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="bi bi-grid-3x3"></i></button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="bi bi-square-fill"></i></button>
+       
+      </div>
+    </nav>
+   
+    <!-- Contenido pestañas -->
+    <div class="tab-content" id="nav-tabContent">
+   
+      <!-- Inicio -->
+      <div class="tab-pane fade show active p-1 " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+       
+       <div class="container">
+        <div class="row p-0">
+            <div class="col-4 p-1 border-0">
+                <div class="card border-0 p-0">
+                        <img src="https://picsum.photos/id/237/400/300">
+                    </div>
+                </div>
+
+            <div class="col-4 p-1">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/76/400/300">
+                    </div>
+                </div>
+            
+            <div class="col-4 p-1">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/146/400/300">
+                    </div>
+                </div>
+            
+        </div>
+        <div class="row p-0">
+            <div class="col-4 p-1 border-0">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/300/400/300">
+                    </div>
+                </div>
+
+            <div class="col-4 p-1">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/666/400/300">
+                    </div>
+                </div>
+            
+            <div class="col-4 p-1">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/157/400/300">
+                    </div>
+                </div>
+            
+        </div>
+        <div class="row p-0">
+            <div class="col-4 p-1 ">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/250/400/300">
+                    </div>
+                </div>
+
+            <div class="col-4 p-1">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/0/400/300">
+                    </div>
+                </div>
+            
+            <div class="col-4 p-1">
+                <div class="card card border-0 p-0">
+                        <img src="https://picsum.photos/id/20/400/300">
+                    </div>
+                </div>
+            
+        </div>
+
+       </div>
+    </div>
+  <!-- Fin Pestaña Inicio -->
+       
+  <!-- Inicio Pestaña Perfil -->
+    <div
+    class="tab-pane fade justify-content-center"
+    id="nav-profile"
+    role="tabpanel"
+    aria-labelledby="nav-profile-tab"
+  >
+
+  <div class="row justify-content-center">
+      <div class="card w-25 h-auto mt-2 mb-2 p-0">
+        <div class="card-header bg-white d-flex justify-content-between">
+          <div>Mi perro Firulais</div>
+          <div>1/6</div>
+        </div>
+
+        <img
+          src="https://picsum.photos/id/237/200"
+          class="card-img-top w-100% h-auto"
+          alt="..."
+        />
+        <div class="card-body">
+  <h6 class="card-text">250.000 Likes</h6>
+          <p class="card-text">
+          This is an example of a good photo you can post on Instagram.
+          </p>
+        </div>
+      </div>
+    </div>
+
+<div class="row d-flex justify-content-center">
+<div class="card w-25 h-auto mt-2 mb-2 p-0" >
+              
+  <div class="card-header bg-white d-flex justify-content-between">
+  <div>La casa donde vivo</div>
+  <div>2/6</div>
+</div>
+
+  <img src="https://picsum.photos/id/76/200" class="card-img-top w-100% h-auto" alt="...">
+  <div class="card-body">
+    <h6 class="card-text">25 Likes</h6>
+    <p class="card-text"> This is an example of a good photo you can post on Instagram.</p>
+  </div>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+  <div class="card w-25 h-auto mt-2 mb-2 p-0" >
+                
+    <div class="card-header bg-white d-flex justify-content-between">
+    <div>El barrio donde me crié</div>
+    <div>3/6</div>
+  </div>
+  
+    <img src="https://picsum.photos/id/146/200" class="card-img-top w-100% h-auto" alt="...">
+    <div class="card-body">
+      <h6 class="card-text">87 Likes</h6>
+      <p class="card-text"> This is an example of a good photo you can post on Instagram.</p>
+    </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Fin Pestaña Perfil -->
+      
+    </div>
+
+  <!-- Fin Pestañas -->
+
+  </body>
+</html>
